@@ -1,0 +1,57 @@
+.our-package{
+  margin-top:50px;
+  text-align: center;
+}
+.package{
+  margin:50px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:hsl(0, 0%, 98%);
+  border-radius: 10px;
+  display: flex;
+  width:72%;
+  height:290px;
+  font-size:18px;
+}
+.package-img img{
+  width:350px;
+  height:290px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.package-details{
+  padding:0 15px;
+  width: 520px;
+}
+
+.icon{
+  height: 22px;
+  margin-bottom:-5px;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+}
+.package-price{
+  padding-left:20px;
+  background-color: hsl(238, 100%, 73%);
+  color:white;
+  width:180px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.book-btn{
+  border:2px white solid;
+  background-color: transparent;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-family:poppins;
+  font-weight:bolder;
+}
+.book-btn:hover{
+  background-color: hsl(238, 100%, 78%);
+}
