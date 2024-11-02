@@ -8,15 +8,7 @@ const packages=[
     days: '6 Days / 5 Nights',
     price: 48000
   },
-  {
-    id: 'group-package-maldives',
-    place: 'MALDIVES',
-    img: 'maldives 1',
-    date: '29th Dec',
-    city: 3,
-    days: '4 Days / 3 Nights',
-    price: 45000
-  },
+
   {
     id: 'group-package-dubai',
     place: 'DUBAI - UAE',

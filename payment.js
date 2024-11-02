@@ -1,7 +1,7 @@
 document.getElementById('cardNumber').addEventListener('input', formatCardNumber);
 document.getElementById('expiryMonth').addEventListener('input', formatMonth);
 let payment = document.querySelector('#paymentForm');
-
+//card - button payment switch
 document.querySelector('.cardPayment').addEventListener('click',()=>{
   payment.innerHTML=`
           <div class="form-group">
@@ -29,7 +29,7 @@ document.querySelector('.cardPayment').addEventListener('click',()=>{
     document.getElementById('expiryMonth').addEventListener('input', formatMonth);
 })
 
-
+//card - button payment switch
 document.querySelector('.upiPayment').addEventListener('click',()=>{
   payment.innerHTML=`
           <div class="form-group">
@@ -45,6 +45,7 @@ document.querySelector('.upiPayment').addEventListener('click',()=>{
       `;
 });
 
+//payment verification
 function formatCardNumber() {
     const cardNumberInput = document.getElementById('cardNumber');
     let cardNumber = cardNumberInput.value.replace(/\D+/g, ''); // Remove spaces
@@ -66,22 +67,48 @@ let expMonth = document.getElementById('expiryMonth');
 let cvvNo =document.getElementById('cvv');
 let holderName= document.getElementById('cardholderName');
 
+let paymentStatus = document.querySelector('.paymentStatus');
 function processPayment() {
     const cardNumber=cardNo.value;
     const expiryMonth = expMonth.value;
     const cvv = cvvNo.value;
     const cardholderName =holderName.value;
 
+//payment status
     if (validateCardNumber(cardNumber) && validateMonth(expiryMonth) && validateCVV(cvv) && cardholderName) {
-        alert("Payment processed successfully!");
+        paymentStatus.innerHTML=`  
+            <div class="paymentSucess">
+                <img class="statusImg" src="src/payment/check_5610944.png">
+                <h1 class="statusText">Payment Succeeded!</h1>
+                <p class="statusSubText">Your transaction was completed successfully. Thank you for your purchase!</p>
+                <a href="index.html"><button class="backButton">OKAY</button></a>
+            </div>`;
         cardNo.value=''; expMonth.value=""; cvvNo.value=''; holderName.value='';
-    } else {
-        alert("Please enter valid payment details.");
     } 
+    else {
+        paymentStatus.innerHTML=`  
+            <div class="paymentSucess">
+                <img class="statusImg" src="src/payment/delete.png">
+                <h1 class="statusText">Payment Failed :(</h1>
+                <p class="statusSubText">Invalid Data. Please Try Again!</p>
+                <button class="tryAgainButton" onclick="paymentFailedClose()" >TRY AGAIN</button>
+             </div>`;
+    } 
+}
+function paymentFailedClose(){
+    paymentStatus.innerHTML=``;
+    console.log(hello);
 }
 
 function processUpiPayment(){
-    alert("Payment processed successfully!");
+
+    paymentStatus.innerHTML=`  
+        <div class="paymentSucess">
+            <img class="statusImg" src="src/payment/check_5610944.png">
+            <h1 class="statusText">Payment Succeeded!</h1>
+            <p class="statusSubText">Your transaction was completed successfully. Thank you for your purchase!</p>
+            <a href="index.html"><button class="backButton">OKAY</button></a>
+        </div>`;
 }
 
 function validateCardNumber(number) {
@@ -99,3 +126,5 @@ function validateCVV(cvv) {
     const regex = /^\d{3}$/;
     return regex.test(cvv);
 }
+
+

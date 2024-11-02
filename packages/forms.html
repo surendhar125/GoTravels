@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter People Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        #detailsForm {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Number of People</h2>
+    <label for="peopleCount">Number of people (1 or 2):</label>
+    <input type="number" id="peopleCount" min="1" max="2" placeholder="Enter 1 or 2">
+    <button onclick="generateForm()">Submit</button>
+
+    <form id="detailsForm">
+        <h3>Enter Details</h3>
+        <div id="formFields"></div>
+        <button type="submit">Submit Details</button>
+    </form>
+
+    <script>
+        function generateForm() {
+            const count = document.getElementById('peopleCount').value;
+            console.log(count);
+            const formFields = document.getElementById('formFields');
+            const detailsForm = document.getElementById('detailsForm');
+
+            formFields.innerHTML = ''; // Clear previous fields if any
+            if (count == 1 || count == 2) {
+                for (let i = 1; i <= count; i++) {
+                    const label = document.createElement('label');
+                    label.textContent = `Name of person ${i}:`;
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.name = `person${i}Name`;
+                    input.placeholder = `Enter name for person ${i}`;
+                    input.required = true;
+                    formFields.appendChild(label);
+                    formFields.appendChild(input);
+                }
+                detailsForm.style.display = 'block';
+            } else {
+                alert("Please enter 1 or 2.");
+                detailsForm.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

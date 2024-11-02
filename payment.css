@@ -3,11 +3,10 @@
   flex-direction: row;
   font-family: Arial, sans-serif;
   font-size: 20px;
-  
+  position: relative;
 }
 .bodyleft{
-  width: 80%;
-
+  max-width: 820px;
   padding:30px 100px;
   border: 1px solid rgb(189, 189, 189);
 }
@@ -144,6 +143,8 @@ button {
 
 
 .bodyRight{
+  position: fixed;
+  right:0;
   margin-left:5px;
   padding: 40px 10px;
   padding-bottom:60px;
@@ -158,6 +159,52 @@ button {
 span{
   display: flex;
   justify-content: end;
-
 }
 
+/*payment Status*/
+.paymentSucess{
+  position:absolute;
+  top:14%;
+  left:35%;
+  width: 350px;
+  height:500px;
+  background-color: white;
+  color:black;
+  padding:20px 50px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px black;
+}
+.statusImg{
+  display: flex;
+  padding: 40px 0px;
+  margin: auto;
+  width: 160px;
+}
+.statusText{
+  text-align: center;
+}
+.statusSubText{
+  padding:10px 0px;
+  text-align: center;
+}
+.backButton{
+  letter-spacing:3px ;
+  word-spacing: 6px;
+  padding-top:20px;
+  background: linear-gradient(to right, rgb(88, 218, 88), rgb(24, 188, 24));
+}
+.backButton:hover{
+  background: linear-gradient(to right, hsl(120, 74%, 60%), hsl(120, 87%, 42%));
+}
+.tryAgainButton{
+  letter-spacing:3px ;
+  word-spacing: 6px;
+  padding-top:20px;
+  background: linear-gradient(to right, hsl(0, 83%, 58%),hsl(0, 99%, 45%));
+
+  transition: all 0.3s;
+}
+.tryAgainButton:hover{
+  background: linear-gradient(to right, hsl(0, 93%, 58%),hsl(0, 100%, 45%));
+ 
+}

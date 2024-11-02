@@ -84,8 +84,8 @@
       <div class="form-group">
         <label for="packageType">Package Type:</label>
         <select id="packageType" name="packageType" required>
-          <option value="">Select a package</option>
-          <option value="honeymoon">Honeymoon</option>
+          <option   value="">Select a package</option>
+          <option class="users" value="honeymoon">Honeymoon</option>
           <option value="holiday">Holiday</option>
           <option value="group">Group</option>
         </select>
@@ -107,7 +107,10 @@
     </form>
   </div>
 
+
+  
   <script>
+
     // JavaScript for form validation
     document.getElementById('packageForm').addEventListener('submit', function(event) {
       event.preventDefault();

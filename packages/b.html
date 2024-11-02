@@ -1,110 +1,152 @@
-<!-- booking.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Page</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-      /* style.css */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f5;
-}
-
-.container {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-h1 {
-    color: #007BFF;
-}
-
-.destination-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-form label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - GoTravels</title>
+  
+  <link href="b.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Book Your Adventure</h1>
-        <img src="https://via.placeholder.com/600x400.png?text=Beautiful+Destination" alt="Destination Image" class="destination-img">
-        <form id="bookingForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="date">Select Date:</label>
-            <input type="date" id="date" name="date" required>
-            
-            <label for="people">Number of People:</label>
-            <input type="number" id="people" name="people" min="1" required>
-            
-            <button type="button" onclick="submitBooking()">Book Now</button>
+  
+
+
+
+  
+  <!--payment form-->
+  <div class="booking-form">
+      <h1 class="title">Book Your Package</h1>
+      <div class="payments">
+        <p class="subtitle">Enter your details below</p>
+        <form id="packageForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Leo Das" maxlength="19" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="emal" id="email" placeholder="abcd@gmail.com" maxlength="19" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Phone No</label>
+              <input type="tel" id="phone" placeholder="1234567890" maxlength="10" required>
+          </div>
+
+          <div class="form-group">
+            <label for="packageType">Package Type</label>
+            <div class="package">
+              <label for="honeymoon">Holiday Package</label>
+              <input type="radio" id="holiday" value="holiday" checked name="packageType">
+              <label for="honeymoon">Honeymoon Package</label>
+              <input type="radio" id="honeymoon" value="honeymoon" name="packageType">
+              <label for="group">Group Package</label>
+              <input type="radio" id="group" value="group" name="packageType">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="destination">Travel Destination</label>
+            <select id="type" class="place">
+              <option value="" disabled selected>Choose the Destination</option>
+              <option value="THAILAND" >THAILAND</option>
+              <option value="DUBAI - UAE">DUBAI - UAE</option>
+              <option value="INDIA">INDIA</option>
+              <option value="JAPAN">JAPAN</option>
+              <option value="CHINA">CHINA</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+              <label for="noOfPerson">No of Person's</label>
+              <input type="number" id="noOfPerson" min='1' required>
+          </div>
+          
+          <button type="button" class='add' onclick="personDetailss()" >Proceed With Payment </button>
+
         </form>
+        <p class="summary-text">By continuing, you accept to our Terms of Services and Privacy Policy</p>
+      <p class="summary-text">please note the payment are non-refundable</p>
+
+      <div class="personDetailsGroup">
+      </div>
     </div>
+  </div>
 
-    <script>
-        function submitBooking() {
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let date = document.getElementById('date').value;
-            let people = document.getElementById('people').value;
 
-            if (name && email && date && people) {
-                alert(`Thank you, ${name}! Your booking for ${date} has been submitted for ${people} person(s).`);
-                window.location.href = "payment.html"; // Redirect to payment page
-            } else {
-                alert("Please fill in all fields.");
-            }
-        }
-    </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  let destination=document.querySelector('.place');
+  document.querySelector('#holiday').addEventListener('click',()=>{
+    destination.innerHTML=`
+           <option value="" disabled selected>Choose the Destination</option>
+            <option value="THAILAND" >THAILAND</option>
+            <option value="DUBAI - UAE">DUBAI - UAE</option>
+            <option value="INDIA">INDIA</option>
+            <option value="JAPAN">JAPAN</option>
+            <option value="CHINA">CHINA</option>
+    `;
+  })
+  document.querySelector('#honeymoon').addEventListener('click',()=>{
+    destination.innerHTML=`
+           <option value="" disabled selected>Choose the Destination</option>
+            <option value="BALI - INDONESIA" >BALI - INDONESIA</option>
+            <option value="MALDIVES">MALDIVES</option>
+            <option value="DUBAI - UAE">DUBAI - UAE</option>
+            <option value="INDIA">INDIA</option>
+            <option value="SINGAPORE">SINGAPORE</option>
+            <option value="MALAYSIA">MALAYSIA</option>
+    `;
+  })
+  document.querySelector('#group').addEventListener('click',()=>{
+    destination.innerHTML=`
+           <option value="" disabled selected>Choose the Destination</option>
+            <option value="JAPAN" >JAPAN</option>
+            <option value="DUBAI - UAE">DUBAI - UAE</option>
+            <option value="INDIA">INDIA</option>
+            <option value="SINGAPORE">SINGAPORE</option>
+            <option value="MALAYSIA">MALAYSIA</option>
+    `;
+  })
+  
+  function personDetailss(){
+    const noOfPerson =document.getElementById('noOfPerson').value;
+    let personHtml= document.querySelector('.personDetailsGroup')
+      for(let i=1; i<=noOfPerson;i++){
+        personHtml.innerHTML+=`
+        <form class="personDetails">
+        <h1>Person ${i} Details</h1>
+        <div class="nameGroup">
+          <div class="fName">
+            <lable for="firstName">First Name</lable>
+            <input type="text" id="firstName" required>
+          </div>
+          <div class="lName">
+            <lable for="firstName">Last Name</lable>
+            <input type="text" id="firstName"  required>
+          </div>
+        </div>
+        <label for="age">Age</label>
+        <input type="number" id="age" required>
+
+        <label for="gender">Gender</label>
+        <div class="genderOption">
+        <label for="male">Male</label>
+        <input type="radio" id="male" value="Male"  name="gender">
+      
+        <label for="female">Female</label>
+        <input type="radio" id="female" value="Female" name="gender">
+      </div>
+      </form>`;
+
+    };  
+    personHtml.innerHTML+=`<a href="../payment.html"><button class="personDetailsButton">Proceed To Payment</button></a>`;
+  };
+ 
+</script>
+
+
+
 </body>
 </html>
