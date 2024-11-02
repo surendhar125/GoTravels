@@ -1,0 +1,110 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+.destination-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Adventure</h1>
+        <img src="https://via.placeholder.com/600x400.png?text=Beautiful+Destination" alt="Destination Image" class="destination-img">
+        <form id="bookingForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" required>
+            
+            <button type="button" onclick="submitBooking()">Book Now</button>
+        </form>
+    </div>
+
+    <script>
+        function submitBooking() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let date = document.getElementById('date').value;
+            let people = document.getElementById('people').value;
+
+            if (name && email && date && people) {
+                alert(`Thank you, ${name}! Your booking for ${date} has been submitted for ${people} person(s).`);
+                window.location.href = "payment.html"; // Redirect to payment page
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>

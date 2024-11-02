@@ -1,5 +1,6 @@
 const packages=[
   {
+    id: 'honeymoon-package-bali',
     place: 'BALI - INDONESIA',
     img: 'bali 4',
     city: 7,
@@ -7,6 +8,7 @@ const packages=[
     price: 62000
   },
   {
+    id: 'honeymoon-package-maldives',
     place: 'MALDIVES',
     img: 'maldives 1',
     city: 3,
@@ -14,6 +16,7 @@ const packages=[
     price: 48000
   },
   {
+    id: 'honeymoon-package-dubai',
     place: 'DUBAI - UAE',
     img:'DUBAI',
     city: 5,
@@ -21,6 +24,7 @@ const packages=[
     price: 52000
   },
   {
+    id: 'honeymoon-package-india',
     place: 'INDIA',
     img:'india (2)',
     city: 7,
@@ -28,6 +32,7 @@ const packages=[
     price: 49000
   },
   {
+    id: 'honeymoon-package-singapore',
     place: 'SINGAPORE',
     img: 'singapore (4)',
     city: 6,
@@ -35,6 +40,7 @@ const packages=[
     price: 56000
   },
   {
+    id: 'honeymoon-package-malaysia',
     place: 'MALAYSIA',
     img: 'MALAYSIA (2)',
     city: 5,

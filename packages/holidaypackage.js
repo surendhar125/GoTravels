@@ -1,5 +1,6 @@
 const packages=[
   {
+    id: 'holiday-package-thailand',
     place: 'THAILAND',
     img: 'THAILAND',
     city: 4,
@@ -7,6 +8,7 @@ const packages=[
     price: 45000
   },
   {
+    id: 'holiday-package-dubai',
     place: 'DUBAI - UAE',
     img: 'DUBAI',
     city: 5,
@@ -14,22 +16,28 @@ const packages=[
     price: 48000
   },
   {
-  place: 'INDIA',
-  img:'india (2)',
-  city: 8,
-  days: '7 Days / 6 Nights',
-  price: 39000
+    id: 'holiday-package-india',
+    place: 'INDIA',
+    img:'india (2)',
+    city: 8,
+    days: '7 Days / 6 Nights',
+    price: 39000
   },
-  {place: 'JAPAN',
+  {
+    id: 'holiday-package-japan',
+    place: 'JAPAN',
     img:'JAPAN (2)',
-  city: 7,
-  days: '6 Days / 5 Nights',
-  price: 55000},
-  {place: 'CHINA',
+    city: 7,
+    days: '6 Days / 5 Nights',
+    price: 55000
+  },
+  {
+    id: 'holiday-package-china',
+    place: 'CHINA',
     img: 'HONGKONG (2)',
-  city: 5,
-  days: '4 Days / 3 Nights',
-  price: 46000}]
+    city: 5,
+    days: '4 Days / 3 Nights',
+    price: 46000}]  
 
 
   

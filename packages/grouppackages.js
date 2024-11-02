@@ -1,5 +1,6 @@
 const packages=[
   {
+    id: 'group-package-japan',
     place: 'JAPAN',
     img: 'JAPAN (2)',
     date: '18th Dec',
@@ -8,6 +9,7 @@ const packages=[
     price: 48000
   },
   {
+    id: 'group-package-maldives',
     place: 'MALDIVES',
     img: 'maldives 1',
     date: '29th Dec',
@@ -16,6 +18,7 @@ const packages=[
     price: 45000
   },
   {
+    id: 'group-package-dubai',
     place: 'DUBAI - UAE',
     img:'DUBAI',
     date: '15th Dec',
@@ -24,6 +27,7 @@ const packages=[
     price: 51000
   },
   {
+    id: 'group-package-india',
     place: 'INDIA',
     img:'india (2)',
     date: '4th Jan',
@@ -32,6 +36,7 @@ const packages=[
     price: 42000
   },
   {
+    id: 'group-package-singapore',
     place: 'SINGAPORE',
     img: 'singapore (4)',
     date: '12th Jan',
@@ -40,6 +45,7 @@ const packages=[
     price: 54000
   },
   {
+    id: 'group-package-malaysia',
     place: 'MALAYSIA',
     img: 'MALAYSIA (2)',
     date: '18th Jan',
