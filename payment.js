@@ -145,4 +145,5 @@ function paymentFailedClose(){
     paymentStatus.innerHTML=``;
 }
 
-
+const noOfPerson =localStorage.getItem('noofperson'); 
+document.querySelector('.noOfPerson').textContent=noOfPerson;

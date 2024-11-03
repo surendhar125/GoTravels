@@ -70,3 +70,16 @@ function personDetailss(){
     personHtml.innerHTML+=`<a href="../payment.html"><button class="formButton personDetailsButton">Proceed To Payment</button></a>`;
   };
 };
+
+
+//no of person in local storage
+
+const number =document.getElementById('noOfPerson');
+
+const submit=document.querySelector('.js-form-submit');
+submit.addEventListener('click',(e)=>{
+  const numbervalue =number.value;
+  console.log(numbervalue);
+  localStorage.setItem('noofperson', numbervalue);
+
+})

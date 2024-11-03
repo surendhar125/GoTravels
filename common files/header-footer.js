@@ -5,7 +5,7 @@ let headerhtml=`
         <a href="index.html"><img id="lug" src="Logo-5.svg" ></a>
       </div>
       <div id="compname">
-        <h1 id="name">GoTravels</h1>
+        <h1 id="nam">GoTravels</h1>
         <h6 id="slogan">... TRAVEL BEYOND THE HORIZON ...</h6>
       </div>
     </div>
