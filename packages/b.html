@@ -149,7 +149,9 @@
       </form>`;
 
     };  
-    personHtml.innerHTML+=`<a href="../payment.html"><button class="personDetailsButton">Proceed To Payment</button></a>`;
+    if(noOfPerson>=1){
+    personHtml.innerHTML+=`<a href="../payment.html"><button class="formButton" class="personDetailsButton">Proceed To Payment</button></a>`;
+  }; 
   };
  
 </script>
