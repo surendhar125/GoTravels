@@ -1,3 +1,4 @@
+
 document.getElementById('cardNumber').addEventListener('input', formatCardNumber);
 document.getElementById('expiryMonth').addEventListener('input', formatMonth);
 let payment = document.querySelector('#paymentForm');
@@ -145,5 +146,43 @@ function paymentFailedClose(){
     paymentStatus.innerHTML=``;
 }
 
+
+//no of person from book now page
 const noOfPerson =localStorage.getItem('noofperson'); 
 document.querySelector('.noOfPerson').textContent=noOfPerson;
+
+//order summary 
+
+//amount
+let costHtml = document.getElementById('amount');
+let taxHtml = document.getElementById('tax');
+let totalHtml = document.getElementById('total');
+
+let amount='';
+let tax='';
+let total='';
+
+let userId='holiday-package-dubai';
+packages.forEach((package)=>{
+    if(package.id===userId){
+        amount=package.price;
+        amountFormat=Intl.NumberFormat().format(amount);
+        costHtml.textContent=`₹ ${amountFormat}`;
+        taxCalculation(amount);
+        totalAmount(amount, tax);
+    }
+});
+
+
+//tax
+function taxCalculation(amount){
+    tax=amount*(18/100);
+    taxFormat=Intl.NumberFormat().format(amount*(18/100));
+    taxHtml.textContent=`₹ ${taxFormat}`;
+}
+
+//total charge
+function totalAmount(amount, tax){
+    total=Intl.NumberFormat().format(((amount+tax)*noOfPerson+20));
+    totalHtml.textContent= `₹ ${total}`;
+}
