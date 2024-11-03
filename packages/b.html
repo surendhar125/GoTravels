@@ -15,32 +15,39 @@
   
   <!--payment form-->
   <div class="booking-form">
-      <h1 class="title">Book Your Package</h1>
-      <div class="payments">
-        <p class="subtitle">Enter your details below</p>
+      
+      <div class="booking">
+        <h1 class="title">Book Your Package</h1>
+
         <form id="packageForm">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Name</label><br>
                 <input type="text" id="name" placeholder="Leo Das" maxlength="19" required>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">Email</label><br>
               <input type="emal" id="email" placeholder="abcd@gmail.com" maxlength="19" required>
           </div>
           <div class="form-group">
-              <label for="phone">Phone No</label>
+              <label for="phone">Phone No</label><br>
               <input type="tel" id="phone" placeholder="1234567890" maxlength="10" required>
           </div>
 
           <div class="form-group">
-            <label for="packageType">Package Type</label>
+            <label for="packageType">Package Type</label><br>
             <div class="package">
-              <label for="honeymoon">Holiday Package</label>
-              <input type="radio" id="holiday" value="holiday" checked name="packageType">
-              <label for="honeymoon">Honeymoon Package</label>
-              <input type="radio" id="honeymoon" value="honeymoon" name="packageType">
-              <label for="group">Group Package</label>
-              <input type="radio" id="group" value="group" name="packageType">
+              <div class="option1">
+                <label for="honeymoon">Holiday Package</label>
+                <input type="radio" class="radio" id="holiday" value="holiday" checked name="packageType">
+              </div>
+              <div class="option2">
+                <label for="honeymoon">Honeymoon Package</label>
+                <input type="radio" id="honeymoon" value="honeymoon" name="packageType">
+              </div>
+              <div class="option3">
+                <label for="group">Group Package</label>
+                <input type="radio" id="group" value="group" name="packageType">
+              </div>
             </div>
           </div>
 
@@ -57,15 +64,13 @@
           </div>
 
           <div class="form-group">
-              <label for="noOfPerson">No of Person's</label>
+              <label for="noOfPerson">No of Person's</label><br>
               <input type="number" id="noOfPerson" min='1' required>
           </div>
           
-          <button type="button" class='add' onclick="personDetailss()" >Proceed With Payment </button>
+          <button type="button" class='add' onclick="personDetailss()" >Submit </button>
 
         </form>
-        <p class="summary-text">By continuing, you accept to our Terms of Services and Privacy Policy</p>
-      <p class="summary-text">please note the payment are non-refundable</p>
 
       <div class="personDetailsGroup">
       </div>
@@ -112,8 +117,9 @@
   
   function personDetailss(){
     const noOfPerson =document.getElementById('noOfPerson').value;
-    let personHtml= document.querySelector('.personDetailsGroup')
-      for(let i=1; i<=noOfPerson;i++){
+    let personHtml= document.querySelector('.personDetailsGroup');
+      
+    for(let i=1; i<=noOfPerson;i++){
         personHtml.innerHTML+=`
         <form class="personDetails">
         <h1>Person ${i} Details</h1>
@@ -123,21 +129,21 @@
             <input type="text" id="firstName" required>
           </div>
           <div class="lName">
-            <lable for="firstName">Last Name</lable>
+            <lable class="lNameLabel" for="firstName">Last Name</lable>
             <input type="text" id="firstName"  required>
           </div>
         </div>
-        <label for="age">Age</label>
-        <input type="number" id="age" required>
+        <label for="age">Age</label><br>
+        <input type="number" id="age" required><br>
 
-        <label for="gender">Gender</label>
-        <div class="genderOption">
-        <label for="male">Male</label>
+        <label for="gender">Gender</label><br>
+        
+        <label for="male" >Male</label>
         <input type="radio" id="male" value="Male"  name="gender">
       
         <label for="female">Female</label>
         <input type="radio" id="female" value="Female" name="gender">
-      </div>
+  
       </form>`;
 
     };  

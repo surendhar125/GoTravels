@@ -28,7 +28,7 @@ let headerhtml=`
     <a id="honey" href="honeymoon.html"><h4>HONEYMOON PACKAGE</h4></a>
     <a id="contact" href="contact.html"><h4>CONTACT US</h4></a>
     <a id="book" href="book.html"><button>BOOK NOW</button></a>
-  </nav>`
+  </nav>`;
 document.querySelector('.header').innerHTML=headerhtml;
 
 let footerhtml=`
@@ -108,5 +108,5 @@ let footerhtml=`
     
   </div>
   <p id="copyright">Copyright © 2024 by GoTravels Pvt Ltd. All Rights Reserved.</p>
-`
+`;
 document.querySelector('.footer').innerHTML=footerhtml;

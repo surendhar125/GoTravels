@@ -1,4 +1,4 @@
-.body{
+body{
   font-family: Arial, sans-serif;
   font-size: 20px;
 }
@@ -7,55 +7,26 @@
   text-align: center;
 }
 
-
-
-/*payment box*/
-.payment-box{
-  display: flex;
- justify-content: center;
+.booking{
+  width: 40%;
+  border: 1px solid black;
+  margin: auto;
+  padding:20px 80px ;
 }
 
-.payment-container {
+
+select{
   width: 100%;
-  max-width: 800px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
+  padding:10px 20px;
+  font-size: 18px;
+  margin-bottom:40px;
+  margin-top:15px;
 }
 
-h2 {
-  color: #333;
-  margin: 5px 0px;
-  font-weight: 600;
-}
-
-.subtitle {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.form-group, .form-group-inline {
-  margin-bottom: 20px;
-}
-.form-group-inline {
-  display: flex;
-  width: 98%;
-  gap: 25px;
-}
-
-label {
-  display: block;
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
 
 input {
-  width: 50%;
+margin-top:15px;
+margin-bottom:40px;
   padding: 12px;
   font-size: 18px;
   color: #333;
@@ -65,20 +36,16 @@ input {
   outline: none;
   transition: border-color 0.3s;
 }
-.package{
-  margin-top: 20px;
-}
-.package input{
-  width:100px;
-} 
+
+ 
+
 input:focus {
   border-color: #205963;
 }
 
-
-
 button {
   width: 100%;
+  margin:40px 0px;
   padding: 14px;
   font-size: 16px;
   font-weight: bold;
@@ -90,17 +57,32 @@ button {
   transition: background-color 0.3s;
 }
 
-
+.personDetails h1{
+  font-size:25px;
+}
 
 
 .package{
   display: flex;
+  width: 800px;
+}
+.package input{
+  
 }
 
 .nameGroup{
   display: flex;
+  width: 100%;
+}
+
+.fName{
+  width: 60%;
+  margin-right:40px;
+}
+.lName{
+  width: 40%;
 }
 .genderOption{
   display: flex;
-
+  
 }
