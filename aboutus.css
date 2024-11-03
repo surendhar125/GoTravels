@@ -3,7 +3,7 @@ body{
     margin: 0;
 }
 #bg{
-  object-position: bottom;
+  object-position: center;
 }
 
 
@@ -79,7 +79,8 @@ body{
   background-color: blue;
   color:white;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
+  box-shadow:  3px 3px 5px black;
   padding:10px;
   padding-left: 20px;
   padding-right: 20px;
