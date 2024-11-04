@@ -45,33 +45,33 @@
             <input type="tel" id="phone" placeholder="1234567890" maxlength="10" required>
         </div>
 
-        <div class="form-group">
-          <label class="label" for="packageType">Package Type</label><br>
-          <div class="package">
-            <div class="option1">
-              <label for="honeymoon">Holiday Package</label>
-              <input type="radio" class="radio" id="holiday" value="holiday" checked name="packageType">
-            </div>
-            <div class="option2">
-              <label for="honeymoon">Honeymoon Package</label>
-              <input type="radio" id="honeymoon" value="honeymoon" name="packageType">
-            </div>
-            <div class="option3">
-              <label for="group">Group Package</label>
-              <input type="radio" id="group" value="group" name="packageType">
-            </div>
-          </div>
-        </div>
 
         <div class="form-group">
           <label class="label" for="destination">Travel Destination</label>
           <select id="type" class="place">
             <option value="" disabled selected>Choose the Destination</option>
-            <option value="THAILAND" >THAILAND</option>
-            <option value="DUBAI - UAE">DUBAI - UAE</option>
-            <option value="INDIA">INDIA</option>
-            <option value="JAPAN">JAPAN</option>
-            <option value="CHINA">CHINA</option>
+<!--holiday package-->
+            <option value="" disabled >Holiday Package</option>
+            <option value="holiday-package-THAILAND" >THAILAND</option>
+            <option value="holiday-package-DUBAI - UAE">DUBAI - UAE</option>
+            <option value="holiday-package-INDIA">INDIA</option>
+            <option value="holiday-package-JAPAN">JAPAN</option>
+            <option value="holiday-package-CHINA">CHINA</option>
+<!--honeymoon package-->
+            <option value="" disabled >Honeymoon Package</option>
+            <option value="honeymoon-package-BALI - INDONESIA" >BALI - INDONESIA</option>
+            <option value="honeymoon-package-MALDIVES">MALDIVES</option>
+            <option value="honeymoon-package-DUBAI - UAE">DUBAI - UAE</option>
+            <option value="honeymoon-package-INDIA">INDIA</option>
+            <option value="honeymoon-package-SINGAPORE">SINGAPORE</option>
+            <option value="honeymoon-package-MALAYSIA">MALAYSIA</option>
+<!--group package-->
+            <option value="" disabled >Group package</option>
+            <option value="group-package-JAPAN" >JAPAN</option>
+            <option value="group-package-DUBAI - UAE">DUBAI - UAE</option>
+            <option value="group-package-INDIA">INDIA</option>
+            <option value="group-package-SINGAPORE">SINGAPORE</option>
+            <option value="group-package-MALAYSIA">MALAYSIA</option>
           </select>
         </div>
 

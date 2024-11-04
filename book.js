@@ -1,35 +1,4 @@
-let destination=document.querySelector('.place');
-document.querySelector('#holiday').addEventListener('click',()=>{
-  destination.innerHTML=`
-         <option value="" disabled selected>Choose the Destination</option>
-          <option value="THAILAND" >THAILAND</option>
-          <option value="DUBAI - UAE">DUBAI - UAE</option>
-          <option value="INDIA">INDIA</option>
-          <option value="JAPAN">JAPAN</option>
-          <option value="CHINA">CHINA</option>
-  `;
-})
-document.querySelector('#honeymoon').addEventListener('click',()=>{
-  destination.innerHTML=`
-         <option value="" disabled selected>Choose the Destination</option>
-          <option value="BALI - INDONESIA" >BALI - INDONESIA</option>
-          <option value="MALDIVES">MALDIVES</option>
-          <option value="DUBAI - UAE">DUBAI - UAE</option>
-          <option value="INDIA">INDIA</option>
-          <option value="SINGAPORE">SINGAPORE</option>
-          <option value="MALAYSIA">MALAYSIA</option>
-  `;
-})
-document.querySelector('#group').addEventListener('click',()=>{
-  destination.innerHTML=`
-         <option value="" disabled selected>Choose the Destination</option>
-          <option value="JAPAN" >JAPAN</option>
-          <option value="DUBAI - UAE">DUBAI - UAE</option>
-          <option value="INDIA">INDIA</option>
-          <option value="SINGAPORE">SINGAPORE</option>
-          <option value="MALAYSIA">MALAYSIA</option>
-  `;
-})
+
 
 function personDetailss(){
   const noOfPerson =document.getElementById('noOfPerson').value;
@@ -72,14 +41,22 @@ function personDetailss(){
 };
 
 
-//no of person in local storage
+
+
+//no of person & package details in local storage
 
 const number =document.getElementById('noOfPerson');
 
+const travelPlace =document.getElementById('type');
+
 const submit=document.querySelector('.js-form-submit');
 submit.addEventListener('click',(e)=>{
-  const numbervalue =number.value;
-  console.log(numbervalue);
-  localStorage.setItem('noofperson', numbervalue);
 
+  const numbervalue =number.value;
+
+  const place =travelPlace.value;
+
+  localStorage.setItem('noofperson', numbervalue);
+  localStorage.setItem('packageId',place);
 })
+

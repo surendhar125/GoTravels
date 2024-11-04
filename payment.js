@@ -162,9 +162,9 @@ let amount='';
 let tax='';
 let total='';
 
-let userId='holiday-package-dubai';
+const locationId =localStorage.getItem('packageId');
 packages.forEach((package)=>{
-    if(package.id===userId){
+    if(package.id===locationId){
         amount=package.price;
         amountFormat=Intl.NumberFormat().format(amount);
         costHtml.textContent=`₹ ${amountFormat}`;
