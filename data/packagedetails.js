@@ -2,7 +2,7 @@
 
 const packages=[
   {
-    id: 'holiday-package-thailand',
+    id: 'holiday-package-THAILAND',
     place: 'THAILAND',
     img: 'THAILAND',
     city: 4,
@@ -10,7 +10,7 @@ const packages=[
     price: 45000
   },
   {
-    id: 'holiday-package-dubai',
+    id: 'holiday-package-DUBAI - UAE',
     place: 'DUBAI - UAE',
     img: 'DUBAI',
     city: 5,
@@ -18,7 +18,7 @@ const packages=[
     price: 48000
   },
   {
-    id: 'holiday-package-india',
+    id: 'holiday-package-INDIA',
     place: 'INDIA',
     img:'india (2)',
     city: 8,
@@ -26,7 +26,7 @@ const packages=[
     price: 39000
   },
   {
-    id: 'holiday-package-japan',
+    id: 'holiday-package-JAPAN',
     place: 'JAPAN',
     img:'JAPAN (2)',
     city: 7,
@@ -34,7 +34,7 @@ const packages=[
     price: 55000
   },
   {
-    id: 'holiday-package-china',
+    id: 'holiday-package-CHINA',
     place: 'CHINA',
     img: 'HONGKONG (2)',
     city: 5,
@@ -45,7 +45,7 @@ const packages=[
   
   
   {
-    id: 'honeymoon-package-bali',
+    id: 'honeymoon-package-BALI - INDONESIA',
     place: 'BALI - INDONESIA',
     img: 'bali 4',
     city: 7,
@@ -53,7 +53,7 @@ const packages=[
     price: 62000
   },
   {
-    id: 'honeymoon-package-maldives',
+    id: 'honeymoon-package-MALDIVES',
     place: 'MALDIVES',
     img: 'maldives 1',
     city: 3,
@@ -61,7 +61,7 @@ const packages=[
     price: 48000
   },
   {
-    id: 'honeymoon-package-dubai',
+    id: 'honeymoon-package-DUBAI - UAE',
     place: 'DUBAI - UAE',
     img:'DUBAI',
     city: 5,
@@ -69,7 +69,7 @@ const packages=[
     price: 52000
   },
   {
-    id: 'honeymoon-package-india',
+    id: 'honeymoon-package-INDIA',
     place: 'INDIA',
     img:'india (2)',
     city: 7,
@@ -77,7 +77,7 @@ const packages=[
     price: 49000
   },
   {
-    id: 'honeymoon-package-singapore',
+    id: 'honeymoon-package-SINGAPORE',
     place: 'SINGAPORE',
     img: 'singapore (4)',
     city: 6,
@@ -85,7 +85,7 @@ const packages=[
     price: 56000
   },
   {
-    id: 'honeymoon-package-malaysia',
+    id: 'honeymoon-package-MALAYSIA',
     place: 'MALAYSIA',
     img: 'MALAYSIA (2)',
     city: 5,
@@ -96,7 +96,7 @@ const packages=[
   
   
   {
-    id: 'group-package-japan',
+    id: 'group-package-JAPAN',
     place: 'JAPAN',
     img: 'JAPAN (2)',
     date: '18th Dec',
@@ -106,7 +106,7 @@ const packages=[
   },
 
   {
-    id: 'group-package-dubai',
+    id: 'group-package-DUBAI - UAE',
     place: 'DUBAI - UAE',
     img:'DUBAI',
     date: '15th Dec',
@@ -115,7 +115,7 @@ const packages=[
     price: 51000
   },
   {
-    id: 'group-package-india',
+    id: 'group-package-INDIA',
     place: 'INDIA',
     img:'india (2)',
     date: '4th Jan',
@@ -124,7 +124,7 @@ const packages=[
     price: 42000
   },
   {
-    id: 'group-package-singapore',
+    id: 'group-package-SINGAPORE',
     place: 'SINGAPORE',
     img: 'singapore (4)',
     date: '12th Jan',
@@ -133,7 +133,7 @@ const packages=[
     price: 54000
   },
   {
-    id: 'group-package-malaysia',
+    id: 'group-package-MALAYSIA',
     place: 'MALAYSIA',
     img: 'MALAYSIA (2)',
     date: '18th Jan',
