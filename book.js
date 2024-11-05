@@ -9,6 +9,7 @@ function personDetailss(){
       personHtml.innerHTML+=`
       <form class="personDetails">
       <h1>Person ${i} Details</h1>
+      <hr>
         <div class="fName">
           <lable class="label" for="firstName">First Name</lable>
           <input type="text" id="firstName" required>

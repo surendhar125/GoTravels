@@ -1,13 +1,13 @@
+
 /*header*/
+
 #bg{
   object-position: center;
 }
 
-
 form{
   font-family: Arial, sans-serif;
   font-size: 20px;
-
 }
 
 
@@ -25,6 +25,7 @@ form{
   border-radius: 10px;
   margin: auto;
   padding:20px 80px ;
+  background-color: rgb(247, 247, 247);
 }
 
 .personDetails h1{
@@ -84,12 +85,6 @@ select{
 .formButton:hover{
   box-shadow: 5px 5px 5px  gray;
 }
-.package{
-  margin-top:10px;
-  margin-bottom:20px;
-  display: flex;
-  justify-content: space-between;
-}
 
 .genderOption{
   display: flex; 
@@ -98,4 +93,16 @@ select{
 }
 .personDetailsButton{
   margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 937px){
+.booking{
+  width: 70%;
+}
+}
+@media only screen and (max-width: 634px){
+  .booking{
+    padding:20px;
+    width: 85%;
+  }
 }

@@ -11,6 +11,7 @@ body{
   width: 100%;
 }
 
+
 .textt{
   position:absolute;
   top:0px;
@@ -78,6 +79,15 @@ body{
   filter:drop-shadow(3px 4px 2px black);
 }
 
+.burger-tag{
+  height: 2em;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+
+}
+
+
 @keyframes grow{
   100%{scale:1.1}  
 }
@@ -143,6 +153,9 @@ body{
 }
 
 
+
+
+
 /*to top icon*/
 html{
   scroll-behavior:smooth;
@@ -183,17 +196,22 @@ html{
   font-size: 50px;
   text-shadow: 5px 2px 0px black;
 }
-
+@media (max-width: 937px){
+  #bg{
+    height:260px;
+  }
+}
 
 
 /*footer*/
 footer{
+
   margin-top:40px;
   background-color: black;
   color:gray;
 }
 .footers{ 
-  dispaly:flex;
+  display:flex;
   flex-direction: row;
 }
 .footerf{
@@ -219,20 +237,99 @@ li{
   flex-direction: row;
   justify-content: space-around;
 }
-.vertical {
-  margin-left:72px;
-  border-left: 5px solid gray;
-  height: 100px;
-}
-#vertical1{
-  margin-left:120px;
+#mail{
+  text-decoration: underline;
+  color:gray;
 }
 #copyright{
   margin-top:-20px;
   text-align: center;
   padding-bottom: 40px;
 }
-#mail{
-  text-decoration: underline;
-  color:gray;
+
+
+@media only screen and (max-width: 937px){
+  .secnav{ 
+    display:block;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    color:black;
+    text-align: center;
+    display:none;
+   
+  }
+
+  .secnav a, a button,   #book button{
+    text-decoration: none;
+    color:rgb(51, 51, 51);
+    font-size: 16px;
+    padding:2px;    
+  }
+
+  .secnav a:hover, a button:hover{
+    color:black;
+    transition: 0.3s;
+
+  }
+  #home:after, #about:after,#group:after, #holiday:after, #honey:after,#contact:after{
+    content:none;
+  }
+  
+  #book button{
+    color:rgb(51, 51, 51);
+    background-color: transparent;
+    padding: 0px;
+    margin-bottom:20px;
+    width:100%;
+    margin-left:-2%;
+    font-size: 16px;
+  }
+  #book button:hover{
+    color:black;
+    animation-name:none;
+  }
+  
+  .burger-tag{
+    display:inline;
+  }
+
+  .showMenu{  /*for burger tag using in js*/
+    display: block;
+    
+  }
+  .socialMedia{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width:900px){
+  .fs{
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:757px){
+  .fs{
+    padding:5px;
+    padding-bottom:40px;
+  }
+}
+@media only screen and (max-width:600px){
+  .footerf{
+    padding: 0 10% ;
+    text-align: center;
+    flex-direction: column;
+    line-height: 20px;
+  }
+  .ul{ 
+    text-align: start;
+    justify-content: center;
+  }
+  .fs{
+    text-align: center;
+    flex-direction: column;
+
+  }
 }

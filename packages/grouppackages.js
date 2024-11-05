@@ -63,7 +63,7 @@ let packageHTML='';
       <p>Starts from ${package.date} </p>
       <p><img class="icon"src="src/holiday/icons/map.png">&ensp;  ${package.city} Cities</p>
       <p> <img class="icon"src= "src/holiday/icons/clock.png">&ensp; ${package.days}</p>  
-      <p class="includes">	&#8734; All Inclusive</p>
+      
       <div class="details">
         <p><img class="icon" src="src/holiday/icons/plane.png"> Flight</p>
         <p><img class="icon" src="src/holiday/icons/resort (1).png"> Hotels</p>

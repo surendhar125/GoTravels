@@ -1,6 +1,6 @@
 body{
   overflow-x:hidden;
-    margin: 0;
+  margin: 0;
 }
 #bg{
   object-position: center;
@@ -193,3 +193,25 @@ strong{
   border-bottom:15px solid white;
   right:10px;
 }
+
+
+
+@media only screen and (max-width:585px){
+  .bcontent{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #bcontent1{
+    width: 90%;
+    margin:20px;
+    padding: 0;
+  }
+  #bcontent2 {
+    width: 90%;
+    margin:20px;
+    padding: 0;
+  }
+}
+

@@ -17,19 +17,30 @@ let headerhtml=`
       <a href="https://www.linkedin.com/company/gtholidays/?originalSubdomain=in"><img class="socialMedia" src="src/linkedin_2504923.png"></a>
       <a href="https://youtube.com/channel/UCkLtp36GCw0_qfHVVJQOFrw"><img class="socialMedia" src="src/youtube_3938026.png"></a>
       <a href="mailto:GoTravels@gmail.com"><img class="socialMedia" src="src/envelope_9073062.png"></a>
+      <img class="burger-tag" src="src/burger-bar.png">
+
     </div>
+  
   </div>
 
   <nav class="secnav">
-    <a id="home" href="index.html"><h4>HOME</h4></a>
-    <a id="about" href="aboutus.html"><h4>ABOUT US</h4></a>
-    <a id="group" href="grouptour.html"><h4>GROUP TOUR</h4></a>
-    <a id="holiday" href="holiday.html"><h4>HOLIDAY PACKAGE</h4></a>
-    <a id="honey" href="honeymoon.html"><h4>HONEYMOON PACKAGE</h4></a>
-    <a id="contact" href="contact.html"><h4>CONTACT US</h4></a>
-    <a id="book" href="book.html"><button>BOOK NOW</button></a>
+    <a id="home" class="secnaveach" href="index.html"><h4>HOME</h4></a>
+    <a id="about" class="secnaveach" href="aboutus.html"><h4>ABOUT US</h4></a>
+    <a id="group" class="secnaveach" href="grouptour.html"><h4>GROUP TOUR</h4></a>
+    <a id="holiday" class="secnaveach" href="holiday.html"><h4>HOLIDAY PACKAGE</h4></a>
+    <a id="honey" class="secnaveach" href="honeymoon.html"><h4>HONEYMOON PACKAGE</h4></a>
+    <a id="contact" class="secnaveach" href="contact.html"><h4>CONTACT US</h4></a>
+    <a id="book" class="secnaveach" href="book.html"><button>BOOK NOW</button></a>
   </nav>`;
 document.querySelector('.header').innerHTML=headerhtml;
+
+//for media query header responsive
+const menuList = document.querySelector('.secnav');
+const burgerTag = document.querySelector('.burger-tag');
+burgerTag.addEventListener('click',()=>{
+  menuList.classList.toggle('showMenu');
+})
+
 
 let footerhtml=`
   <div class="footerf">
@@ -83,18 +94,19 @@ let footerhtml=`
   </div>
 
   <div class="fs">
-    <div class="vertical" id="vertical1"></div>
+
     <div class="fsf">
     <h3>Call Us</h3>
     <h1>+91 9940882200</h1>
     </div>
 
-    <div class="vertical" id="vertical2"></div>
+
     <div class="fss">
       <h3>Email Us</h3>
       <a href="mailto:GoTravels@gmail.com"><h1 id="mail">mail@gotravels.in</h1></a>
     </div>
-    <div class="vertical" id="vertical3"></div>
+
+
     <div class="fst">
       
       <h3>Follow Us</h3>
