@@ -63,19 +63,18 @@ let packageHTML='';
       <p>Starts from ${package.date} </p>
       <p><img class="icon"src="src/holiday/icons/map.png">&ensp;  ${package.city} Cities</p>
       <p> <img class="icon"src= "src/holiday/icons/clock.png">&ensp; ${package.days}</p>  
-      
       <div class="details">
-        <p><img class="icon" src="src/holiday/icons/plane.png"> Flight</p>
-        <p><img class="icon" src="src/holiday/icons/resort (1).png"> Hotels</p>
-        <p><img class="icon" src="src/holiday/icons/dinner.png"> Meals</p>
-        <p><img class="icon" src="src/holiday/icons/dslr-camera.png"> Sightseeing</p>
-        <p><img class="icon" src="src/holiday/icons/bus.png"> Transport</p>
+        <p ><img class="icon" src="src/holiday/icons/plane.png"> <span class="text">Flight</span> </p>
+        <p><img class="icon" src="src/holiday/icons/resort (1).png"> <span class="text">Hotels</span> </p>
+        <p><img class="icon" src="src/holiday/icons/dinner.png"><span class="text">Food</span> </p>
+        <p><img class="icon" src="src/holiday/icons/dslr-camera.png"> <span class="text">Sightseeing</span> </p>
+        <p><img class="icon" src="src/holiday/icons/bus.png"> <span class="text">Transport</span> </p>
     </div>
     </div>
 
     <div class="package-price">
       <p>Starts from</p>
-      <h1>&#8377; ${package.price}</h1>
+      <h1 class="price">&#8377; ${package.price}</h1>
       <p>per person</p>
       <a  href="book.html"><button class="book-btn">BOOK NOW</button></a>
     </div>

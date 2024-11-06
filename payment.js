@@ -1,7 +1,49 @@
 
+//no of person from book now page
+const noOfPerson =localStorage.getItem('noofperson'); 
+document.querySelector('.noOfPerson').textContent=noOfPerson;
+
+//order summary 
+
+//amount
+let costHtml = document.getElementById('amount');
+let taxHtml = document.getElementById('tax');
+let totalHtml = document.getElementById('total');
+
+let amount='';
+let tax='';
+let total='';
+
+const locationId =localStorage.getItem('packageId');
+packages.forEach((package)=>{
+    if(package.id===locationId){
+        amount=package.price;
+        amountFormat=Intl.NumberFormat().format(amount);
+        costHtml.textContent=`₹ ${amountFormat}`;
+        taxCalculation(amount);
+        totalAmount(amount, tax);
+    }
+});
+
+
+//tax
+function taxCalculation(amount){
+    tax=amount*(18/100);
+    taxFormat=Intl.NumberFormat().format(amount*(18/100));
+    taxHtml.textContent=`₹ ${taxFormat}`;
+}
+
+//total charge
+function totalAmount(amount, tax){
+    total=Intl.NumberFormat().format(((amount+tax)*noOfPerson+20));
+    totalHtml.textContent= `₹ ${total}`;
+}
+
+
 document.getElementById('cardNumber').addEventListener('input', formatCardNumber);
 document.getElementById('expiryMonth').addEventListener('input', formatMonth);
 let payment = document.querySelector('#paymentForm');
+
 
 //card - button payment switch
 document.querySelector('.cardPayment').addEventListener('click',()=>{
@@ -25,7 +67,7 @@ document.querySelector('.cardPayment').addEventListener('click',()=>{
               <label for="cardholderName">Cardholder's Name</label>
               <input type="text" id="cardholderName" placeholder="Leo Das" required>
           </div>
-          <button type="button" onclick="processPayment()">Proceed With Payment </button> 
+          <button type="button" class="payment" onclick="processPayment()">Pay ₹ ${total}</button> 
     `
     document.getElementById('cardNumber').addEventListener('input', formatCardNumber);
     document.getElementById('expiryMonth').addEventListener('input', formatMonth);
@@ -43,9 +85,10 @@ document.querySelector('.upiPayment').addEventListener('click',()=>{
               <label for="accountHolderName">Account holder's Name</label>
               <input type="text" id="accountHolderName" placeholder="Leo Das" required>
           </div>
-          <button type="button" onclick="processUpiPayment()">Proceed With Payment </button>
+          <button type="button" class="payment" onclick="processUpiPayment()">Pay ₹${total}</button>
       `;
 });
+document.querySelector('.payment').textContent=`Pay ₹${total}`;    
 
 //payment validation card
 function formatCardNumber() {
@@ -146,43 +189,3 @@ function paymentFailedClose(){
     paymentStatus.innerHTML=``;
 }
 
-
-//no of person from book now page
-const noOfPerson =localStorage.getItem('noofperson'); 
-document.querySelector('.noOfPerson').textContent=noOfPerson;
-
-//order summary 
-
-//amount
-let costHtml = document.getElementById('amount');
-let taxHtml = document.getElementById('tax');
-let totalHtml = document.getElementById('total');
-
-let amount='';
-let tax='';
-let total='';
-
-const locationId =localStorage.getItem('packageId');
-packages.forEach((package)=>{
-    if(package.id===locationId){
-        amount=package.price;
-        amountFormat=Intl.NumberFormat().format(amount);
-        costHtml.textContent=`₹ ${amountFormat}`;
-        taxCalculation(amount);
-        totalAmount(amount, tax);
-    }
-});
-
-
-//tax
-function taxCalculation(amount){
-    tax=amount*(18/100);
-    taxFormat=Intl.NumberFormat().format(amount*(18/100));
-    taxHtml.textContent=`₹ ${taxFormat}`;
-}
-
-//total charge
-function totalAmount(amount, tax){
-    total=Intl.NumberFormat().format(((amount+tax)*noOfPerson+20));
-    totalHtml.textContent= `₹ ${total}`;
-}

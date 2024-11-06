@@ -6,14 +6,14 @@
   position: relative;
 }
 .bodyleft{
-  max-width: 820px;
-  padding:30px 100px;
+  max-width:58%;
+  padding:3% 5%;
   border: 1px solid rgb(189, 189, 189);
 }
 .pageTitle{
   margin: 0px;
-
 }
+
 /*payment option */
 .payment-option-group{
   display: flex;
@@ -145,12 +145,11 @@ button {
 .bodyRight{
   position: fixed;
   right:0;
-  margin-left:5px;
-  padding: 40px 10px;
-  padding-bottom:60px;
+  padding: 2% 1%;
+  padding-bottom:5%;
   width: 30%;
   border: 1px solid rgb(189, 189, 189);
-  height: 490px;
+  min-height: 490px;
 }
 .summary-text{
   color: gray;
@@ -208,3 +207,35 @@ span{
   background: linear-gradient(to right, hsl(0, 93%, 58%),hsl(0, 100%, 45%));
  
 }
+
+
+
+
+@media  only screen and (max-width:1040px){
+  .input-container{
+    position:relative;
+    height:6rem;
+    width: 400PX;
+    margin: 2rem 0.5rem  ; 
+  }
+    
+} 
+@media  only screen and (max-width:742px){
+  .form-group-inline {
+    flex-direction: column;
+    gap: 2px;
+  }
+    
+} 
+@media  only screen and (max-width:580px){
+  .bodyRight{
+    display: none;
+  }
+  .bodyleft{
+    max-width: 100%;
+    border: none;
+  }
+}
+
+
+
