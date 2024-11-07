@@ -37,7 +37,7 @@ function personDetailss(){
 
   };  
   if(noOfPerson=>1){
-    personHtml.innerHTML+=`<a href="../payment.html"><button class="formButton personDetailsButton">Proceed To Payment</button></a>`;
+    personHtml.innerHTML+=`<a href="payment.html"><button class="formButton personDetailsButton">Proceed To Payment</button></a>`;
   };
 };
 
