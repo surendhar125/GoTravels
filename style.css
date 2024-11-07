@@ -14,6 +14,7 @@
 
 
 #bpara{
+  font-family: roboto;
   color:white;
   font-weight: bold;
   text-indent: 20px;
@@ -32,10 +33,10 @@
   margin-top: 60px;
   margin-bottom: 200px;
   gap:50px;
-  
 }
 
 #learnmore, #booknow{
+  font-family: 'roboto slab';
   padding: 20px;
   width:250px;
   border:none;
@@ -46,6 +47,7 @@
   cursor: pointer;
   text-shadow: 1px 1px 10px black;
 }
+
 #learnmore:hover, #booknow:hover{
   background-color: hsl(240, 83%, 60%);
   animation-name: grow;
@@ -210,6 +212,8 @@
   color:black;
   border:1px solid black;
   text-transform: uppercase;
+  font-family: 'roboto slab';
+  font-weight:bold;
 }
 
 .moreDes:hover{

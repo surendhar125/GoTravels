@@ -104,7 +104,7 @@ let footerhtml=`
 
     <div class="fss">
       <h3>Email Us</h3>
-      <a href="mailto:GoTravels@gmail.com"><h1 id="mail">mail@gotravels.in</h1></a>
+      <a href="mailto:GoTravels@gmail.com"><h1 id="mail">mail@gotravels.com</h1></a>
     </div>
 
 

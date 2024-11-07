@@ -68,12 +68,21 @@
   justify-content: space-evenly;
   width: 100%;
 }
+.phone, .mailid{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
 .getintouch img{
   width: 30px;
 }
-.getintouch .img1{
-margin-top: 40px;
+.mail{
+  text-decoration: none;
+  color:black;
 }
+
+
 form{
   background-color:rgb(231, 231, 231);
   box-shadow: 8px 8px  40px black;

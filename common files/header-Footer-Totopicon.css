@@ -48,7 +48,6 @@ body{
 #title{
   display: flex;
   flex-direction: row;
-  
 }
 
 #compname{
@@ -334,5 +333,33 @@ li{
     text-align: center;
     flex-direction: column;
 
+  }
+}
+
+
+@media only screen and (max-width:430px){
+  .navigation{
+    padding:5px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  #nam{
+    font-family: Tahoma ;
+    font-style: italic;
+    margin-left: -10px;
+    color:white;
+    font-size: 28px;
+  }
+  
+  #slogan{
+    margin-top: -15px;
+    margin-left: -10px;
+    color:white;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width:371px){
+  #slogan{
+    font-size: 9.2px;
   }
 }
