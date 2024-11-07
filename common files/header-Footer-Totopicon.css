@@ -68,11 +68,14 @@ body{
   color:white;
 }
 
-.socialMedia{
+.socialMedia, .login{
   height:2em;
   padding: 10px;
+  cursor: pointer;
 }
-.socialMedia:hover{
+
+
+.socialMedia:hover, .login:hover{
   animation-name: grow;
   animation-duration: 1ms;
   animation-fill-mode:forwards;

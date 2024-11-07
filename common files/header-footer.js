@@ -17,6 +17,7 @@ let headerhtml=`
       <a href="https://www.linkedin.com/company/gtholidays/?originalSubdomain=in"><img class="socialMedia" src="src/linkedin_2504923.png"></a>
       <a href="https://youtube.com/channel/UCkLtp36GCw0_qfHVVJQOFrw"><img class="socialMedia" src="src/youtube_3938026.png"></a>
       <a href="mailto:GoTravels@gmail.com"><img class="socialMedia" src="src/envelope_9073062.png"></a>
+      <a href="loginpage.html"><img class="login" src="src/login-avatar (1).png" ></a>
       <img class="burger-tag" src="src/burger-bar.png">
 
     </div>
