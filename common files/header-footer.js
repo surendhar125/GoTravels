@@ -111,11 +111,11 @@ let footerhtml=`
     <div class="fst">
       
       <h3>Follow Us</h3>
-      <a href="https://www.facebook.com/gtholidays"><img class="socialMedia" src="src/facebook_2504903.png"></a>
-      <a href="https://www.instagram.com/gtholidays.in/?hl=en"><img class="socialMedia" src="src/instagram_2111463.png"></a>
-      <a href="https://www.linkedin.com/company/gtholidays/?originalSubdomain=in"><img class="socialMedia" src="src/linkedin_2504923.png"></a>
-      <a href="https://youtube.com/channel/UCkLtp36GCw0_qfHVVJQOFrw"><img class="socialMedia" src="src/youtube_3938026.png"></a>
-      <a href="mailto:GoTravels@gmail.com"><img class="socialMedia" src="src/envelope_9073062.png"></a>
+      <a href="https://www.facebook.com/gtholidays"><img class="socialMedia fsocialMedia" src="src/facebook_2504903.png"></a>
+      <a href="https://www.instagram.com/gtholidays.in/?hl=en"><img class="socialMedia fsocialMedia" src="src/instagram_2111463.png"></a>
+      <a href="https://www.linkedin.com/company/gtholidays/?originalSubdomain=in"><img class="socialMedia fsocialMedia" src="src/linkedin_2504923.png"></a>
+      <a href="https://youtube.com/channel/UCkLtp36GCw0_qfHVVJQOFrw"><img class="socialMedia fsocialMedia" src="src/youtube_3938026.png"></a>
+      <a href="mailto:GoTravels@gmail.com"><img class="socialMedia fsocialMedia" src="src/envelope_9073062.png"></a>
     
     </div>
     

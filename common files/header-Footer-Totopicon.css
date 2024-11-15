@@ -304,6 +304,10 @@ li{
   .socialMedia{
     display: none;
   }
+  .fsocialMedia{
+    display: inline-block;
+    padding: 4px;
+  }
 }
 
 
@@ -318,7 +322,7 @@ li{
     padding-bottom:40px;
   }
 }
-@media only screen and (max-width:600px){
+@media only screen and (max-width:640px){
   .footerf{
     padding: 0 10% ;
     text-align: center;
