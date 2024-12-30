@@ -26,14 +26,14 @@
 </div>
 
   <!--booking form-->
-  <div class="booking-form">
+  <form class="booking-form">
       
     <div class="booking">
       <h1 class="title">Book Your Package</h1>
 
       <form id="packageForm">
           <div class="form-group">
-              <label class="label" for="name">Name</label><br>
+              <label class="label" for="name" >Name</label><br>
               <input type="text" id="name" placeholder="Leo Das" maxlength="19" required>
           </div>
           <div class="form-group">
@@ -48,7 +48,7 @@
 
         <div class="form-group">
           <label class="label" for="destination">Travel Destination</label>
-          <select id="type" class="place">
+          <select id="type" class="place" required>
             <option value="" disabled selected>Choose the Destination</option>
 <!--holiday package-->
             <option value="" disabled >Holiday Package</option>
@@ -80,14 +80,14 @@
             <input type="number" id="noOfPerson" min='1' required>
         </div>
         
-        <button class="formButton js-form-submit" type="button" class='add' onclick="personDetailss()" >Submit </button>
+        <button class="formButton js-form-submit" type="submit" class='add' onclick="personDetailss()" >Submit </button>
 
       </form>
 
     <div class="personDetailsGroup">
     </div>
   </div>
-</div>
+</form>
 
 
   

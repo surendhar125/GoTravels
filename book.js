@@ -23,7 +23,7 @@ function personDetailss(){
         <input type="number" id="age" required><br>
         <div class="gender">
           <label class="label" for="gender">Gender</label><br>
-          <div class="genderOption">
+          <div class="genderOption" >
             <div>
               <label for="male" >Male</label>
               <input type="radio" id="male" value="Male"  name="gender">
